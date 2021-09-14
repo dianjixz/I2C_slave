@@ -94,13 +94,10 @@ void i2c_slave_wait_scl_low()
     if (--i == 0)
     {
       i2c_s.state = I2C_STATE_TIMEOUT;
-      i2c_s.module_status = 100 - 1;
+      i2c_s.module_status = 100;
       break;
     }
   }
-
-
-
 }
 
 void time_out_fun()
